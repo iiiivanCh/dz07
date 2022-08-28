@@ -11,7 +11,7 @@ int userRows = GetNumberFromUser("Введите желаемое количес
  "Ошибка ввода, повторите ввод");
 int userColumns = GetNumberFromUser("Введите желаемое количество столбцов в массиве: ",
  "Ошибка ввода, повторите ввод");
-PrintArray(SetArray(userRows, userColumns));
+PrintArray(GetArray(userRows, userColumns));
 
 
 int GetNumberFromUser(string message, string errorMessage)
@@ -26,7 +26,7 @@ int GetNumberFromUser(string message, string errorMessage)
   }
 }
 
-double[,] SetArray(int rows, int columns)
+double[,] GetArray(int rows, int columns)
 {
   double[,] result = new double[rows, columns];
   for (int i = 0; i < rows; i++)
